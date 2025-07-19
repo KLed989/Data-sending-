@@ -49,9 +49,8 @@
     }
 
     function getRandomCurrent() {
-      // Randomly decide if AC is ON (5-6A) or OFF (0A)
-      const isACOn = Math.random() > 0.5; // 50% chance of being ON
-      return isACOn ? (5 + Math.random()).toFixed(1) : 0.0;
+      // AC is always ON (5-6A)
+      return (5 + Math.random()).toFixed(1);
     }
 
     function updateValues() {
