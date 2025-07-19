@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voltage Simulator</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    .value { font-size: 2rem; color: #2a9d8f; }
+  </style>
+</head>
+<body>
+  <h2>Simulated Voltage</h2>
+  <div class="value" id="voltage">Loading...</div>
+
+  <script>
+    function getRandomVoltage() {
+      return (Math.random() * (4.2 - 3.0) + 3.0).toFixed(2);
+    }
+
+    function updateVoltage() {
+      const voltage = getRandomVoltage();
+      document.getElementById("voltage").innerText = voltage + " V";
+    }
+
+    updateVoltage();
+    setInterval(updateVoltage, 2000); // Update every 2 seconds
+  </script>
+</body>
+</html>
